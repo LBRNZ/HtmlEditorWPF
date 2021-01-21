@@ -1,0 +1,177 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <TargetFrameworks>net472</TargetFrameworks>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+
+    <RootNamespace>Smith.WPF.HtmlEditor</RootNamespace>
+    <AssemblyName>HtmlEditorWPF</AssemblyName>
+    <Company></Company>
+    <Authors>Marc Lieberenz</Authors>
+    <Description>Fork of SmithHtmlEditor</Description>
+    <Copyright>John Smith - https://archive.codeplex.com/?p=smithhtmleditor</Copyright>
+    <PackageProjectUrl>https://github.com/LBRNZ/HtmlEditorWPF</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LBRNZ/HtmlEditorWPF</RepositoryUrl>
+    <PackageTags>Smith.WPF.HtmlEditor HtmlEditor WPF</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.0|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <!-- ULTIMATE HACK: https://stackoverflow.com/questions/48440223/assets-file-project-assets-json-not-found-run-a-nuget-package-restore -->
+    <Exec Command="dotnet restore" />
+  </Target>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\UiText.en-US.resx" />
+    <EmbeddedResource Remove="Resources\UiText.hu-HU.resx" />
+    <EmbeddedResource Remove="Resources\UiText.zh-CN.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="MSHTML.dll">
+      <Guid>3050f1c5-98b5-11cf-bb82-00aa00bdce0b</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <Private>true</Private>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <!-- DeploymentContent: Interop.MSHTML.dll is missing https://developercommunity.visualstudio.com/content/problem/248000/missing-dlls-from-desktop-bridge-generated-appx-in.html -->
+  <!--<ItemGroup>
+    <Reference Include="Interop.MSHTML">
+      <HintPath>..\..\..\Dependences\Libraries\Interop.MSHTML.dll</HintPath>
+      <DeploymentContent>true</DeploymentContent>
+    </Reference>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <None Remove="Resources\Images\bold.png" />
+    <None Remove="Resources\Images\browser.png" />
+    <None Remove="Resources\Images\center.png" />
+    <None Remove="Resources\Images\code.png" />
+    <None Remove="Resources\Images\copy.png" />
+    <None Remove="Resources\Images\cut.png" />
+    <None Remove="Resources\Images\del.png" />
+    <None Remove="Resources\Images\erase.png" />
+    <None Remove="Resources\Images\error.png" />
+    <None Remove="Resources\Images\find.png" />
+    <None Remove="Resources\Images\fontcolor.png" />
+    <None Remove="Resources\Images\goto.png" />
+    <None Remove="Resources\Images\help.png" />
+    <None Remove="Resources\Images\htmlcode.png" />
+    <None Remove="Resources\Images\hyperlink.png" />
+    <None Remove="Resources\Images\image.png" />
+    <None Remove="Resources\Images\indent.png" />
+    <None Remove="Resources\Images\italic.png" />
+    <None Remove="Resources\Images\left.png" />
+    <None Remove="Resources\Images\linecolor.png" />
+    <None Remove="Resources\Images\listbullets.png" />
+    <None Remove="Resources\Images\listnumbered.png" />
+    <None Remove="Resources\Images\new.png" />
+    <None Remove="Resources\Images\open.png" />
+    <None Remove="Resources\Images\outdent.png" />
+    <None Remove="Resources\Images\paste.png" />
+    <None Remove="Resources\Images\print.png" />
+    <None Remove="Resources\Images\prop.png" />
+    <None Remove="Resources\Images\redo.png" />
+    <None Remove="Resources\Images\refresh.png" />
+    <None Remove="Resources\Images\replace.png" />
+    <None Remove="Resources\Images\right.png" />
+    <None Remove="Resources\Images\save.png" />
+    <None Remove="Resources\Images\saveas.png" />
+    <None Remove="Resources\Images\spelling.png" />
+    <None Remove="Resources\Images\stretch.png" />
+    <None Remove="Resources\Images\subscript.png" />
+    <None Remove="Resources\Images\superscript.png" />
+    <None Remove="Resources\Images\table.png" />
+    <None Remove="Resources\Images\underline.png" />
+    <None Remove="Resources\Images\undo.png" />
+    <None Remove="Resources\Images\window.png" />
+    <None Remove="Resources\Images\ZoomIn.png" />
+    <None Remove="Resources\Images\ZoomOut.png" />
+    <None Remove="smithhtmleditor.config.xml" />
+    <None Remove="smithhtmleditor.stylesheet.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\bold.png" />
+    <Resource Include="Resources\Images\browser.png" />
+    <Resource Include="Resources\Images\center.png" />
+    <Resource Include="Resources\Images\code.png" />
+    <Resource Include="Resources\Images\copy.png" />
+    <Resource Include="Resources\Images\cut.png" />
+    <Resource Include="Resources\Images\del.png" />
+    <Resource Include="Resources\Images\erase.png" />
+    <Resource Include="Resources\Images\error.png" />
+    <Resource Include="Resources\Images\find.png" />
+    <Resource Include="Resources\Images\fontcolor.png" />
+    <Resource Include="Resources\Images\goto.png" />
+    <Resource Include="Resources\Images\help.png" />
+    <Resource Include="Resources\Images\htmlcode.png" />
+    <Resource Include="Resources\Images\hyperlink.png" />
+    <Resource Include="Resources\Images\image.png" />
+    <Resource Include="Resources\Images\indent.png" />
+    <Resource Include="Resources\Images\italic.png" />
+    <Resource Include="Resources\Images\left.png" />
+    <Resource Include="Resources\Images\linecolor.png" />
+    <Resource Include="Resources\Images\listbullets.png" />
+    <Resource Include="Resources\Images\listnumbered.png" />
+    <Resource Include="Resources\Images\new.png" />
+    <Resource Include="Resources\Images\open.png" />
+    <Resource Include="Resources\Images\outdent.png" />
+    <Resource Include="Resources\Images\paste.png" />
+    <Resource Include="Resources\Images\print.png" />
+    <Resource Include="Resources\Images\prop.png" />
+    <Resource Include="Resources\Images\redo.png" />
+    <Resource Include="Resources\Images\refresh.png" />
+    <Resource Include="Resources\Images\replace.png" />
+    <Resource Include="Resources\Images\right.png" />
+    <Resource Include="Resources\Images\save.png" />
+    <Resource Include="Resources\Images\saveas.png" />
+    <Resource Include="Resources\Images\spelling.png" />
+    <Resource Include="Resources\Images\stretch.png" />
+    <Resource Include="Resources\Images\subscript.png" />
+    <Resource Include="Resources\Images\superscript.png" />
+    <Resource Include="Resources\Images\table.png" />
+    <Resource Include="Resources\Images\underline.png" />
+    <Resource Include="Resources\Images\undo.png" />
+    <Resource Include="Resources\Images\window.png" />
+    <Resource Include="Resources\Images\ZoomIn.png" />
+    <Resource Include="Resources\Images\ZoomOut.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="smithhtmleditor.config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="smithhtmleditor.stylesheet.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\UIText.Designer.cs">
+      <DependentUpon>UiText.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Update="Resources\UIText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UiText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
