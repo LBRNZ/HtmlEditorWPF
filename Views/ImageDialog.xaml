@@ -5,7 +5,7 @@
 		xmlns:resc="clr-namespace:Smith.WPF.HtmlEditor.Resources"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False"
         Title="{x:Static resc:UiText.WinTitle_InsertImage}"
-		Height="440" Width="780" Icon="/Smith.WPF.HtmlEditor;Component/Resources/Images/image.png">
+		Height="440" Width="780" Icon="/HtmlEditorWPF;Component/Resources/Images/image.png">
     <Window.Resources>
 		<Style TargetType="{x:Type Label}">
 			<Setter Property="HorizontalContentAlignment" Value="Right" />

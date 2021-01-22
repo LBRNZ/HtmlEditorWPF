@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:Smith.WPF.HtmlEditor"
 		xmlns:recs="clr-namespace:Smith.WPF.HtmlEditor.Resources"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False"
-        Title="{x:Static recs:UiText.WinTitle_InsertTable}" Height="240" Width="400" Icon="/Smith.WPF.HtmlEditor;Component/Resources/Images/table.png">
+        Title="{x:Static recs:UiText.WinTitle_InsertTable}" Height="240" Width="400" Icon="/HtmlEditorWPF;Component/Resources/Images/table.png">
 	<Window.Resources>
 		<Style TargetType="{x:Type Label}">
 			<Setter Property="HorizontalContentAlignment" Value="Right" />

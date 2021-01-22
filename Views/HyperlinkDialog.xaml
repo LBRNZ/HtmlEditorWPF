@@ -5,7 +5,7 @@
         xmlns:resc="clr-namespace:Smith.WPF.HtmlEditor.Resources"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False"
         Title="{x:Static resc:UiText.WinTitle_InsertHyperlink}" Height="140" Width="380"
-        Icon="/Smith.WPF.HtmlEditor;Component/Resources/Images/hyperlink.png">    
+        Icon="/HtmlEditorWPF;Component/Resources/Images/hyperlink.png">    
     <Window.Resources>
 		<Style TargetType="{x:Type Label}">
 			<Setter Property="VerticalContentAlignment" Value="Center" />
