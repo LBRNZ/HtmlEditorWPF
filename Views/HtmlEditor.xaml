@@ -16,9 +16,9 @@
             <Style x:Key="ToolBarImage"
                 TargetType="{x:Type Image}">
                 <Setter Property="Width"
-                    Value="18" />
+                    Value="16" />
                 <Setter Property="Height"
-                    Value="18" />
+                    Value="16" />
             </Style>
             <Style x:Key="ViewTypeToggle"
                 TargetType="{x:Type RadioButton}">
@@ -170,15 +170,16 @@
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/undo.png" />
+                           Source="{StaticResource undo}" />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="{x:Static resc:UiText.Cmd_Redo}"
                       Command="Redo"
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
+
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/redo.png" />
+                           Source="{StaticResource redo}" />
                 </MenuItem.Icon>
             </MenuItem>
             <Separator Margin="0,-2" />
@@ -187,7 +188,7 @@
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/cut.png" />
+                           Source="{StaticResource cut}" />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="{x:Static resc:UiText.Cmd_Copy}"
@@ -195,7 +196,7 @@
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/copy.png" />
+                           Source="{StaticResource copy}" />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="{x:Static resc:UiText.Cmd_Paste}"
@@ -203,7 +204,7 @@
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/paste.png" />
+                           Source="{StaticResource paste}" />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="{x:Static resc:UiText.Cmd_Delete}"
@@ -211,7 +212,7 @@
                       CommandTarget="{Binding ElementName=This}">
                 <MenuItem.Icon>
                     <Image Style="{StaticResource ToolBarImage}"
-                           Source="/HtmlEditorWPF;Component/Resources/Images/del.png" />
+                           Source="{StaticResource del}" />
                 </MenuItem.Icon>
             </MenuItem>
             <Separator Margin="0,-2" />

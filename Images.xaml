@@ -972,5 +972,167 @@
             </DrawingGroup>
         </DrawingImage.Drawing>
     </DrawingImage>
-
+    <DrawingImage x:Key="undo">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <DrawingGroup ClipGeometry="F1 M0,32 L32,32 32,0 0,0 z">
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,3.519,17.0303"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Geometry="F1 M0,0 C-0.175,-0.837 -0.269,-1.704 -0.269,-2.593 -0.269,-9.565 5.383,-15.218 12.356,-15.218 19.329,-15.218 24.981,-9.565 24.981,-2.593 24.981,2.721 21.694,7.259 17.045,9.122">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF005594" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10" StartLineCap="Flat" Thickness="3">
+                                    <Pen.DashStyle>
+                                        <DashStyle/>
+                                    </Pen.DashStyle>
+                                </Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,18.0508,20.3833"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 L-2.162,8.763 6.719,10.367 z"/>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="redo">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <DrawingGroup ClipGeometry="F1 M0,32 L32,32 32,0 0,0 z">
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,28.2305,17.0303"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Geometry="F1 M0,0 C0.176,-0.837 0.27,-1.704 0.27,-2.593 0.27,-9.565 -5.383,-15.218 -12.355,-15.218 -19.328,-15.218 -24.98,-9.565 -24.98,-2.593 -24.98,2.721 -21.693,7.259 -17.045,9.122">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF005594" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10" StartLineCap="Flat" Thickness="3">
+                                    <Pen.DashStyle>
+                                        <DashStyle/>
+                                    </Pen.DashStyle>
+                                </Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,13.6992,20.3833"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 L2.162,8.763 -6.719,10.367 z"/>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="copy">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="#FF3478BC" Geometry="F1 M20.417,6.312 L1.855,6.312 1.855,30.499 20.417,30.499 z"/>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,24.5215,25.4585"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 L-13,0 -13,-24.187 5.562,-24.187 5.562,-5.563 z"/>
+                </DrawingGroup>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,24.4785,25.499"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FF122D46" Geometry="F1 M0,0 L0,-5.562 5.562,-5.562 z"/>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="paste">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="#FFFCD837" Geometry="F1 M20.662,5.312 L2.099,5.312 2.099,29.499 20.662,29.499 z"/>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,24.5215,25.4585"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 L-13,0 -13,-24.187 5.562,-24.187 5.562,-5.563 z"/>
+                </DrawingGroup>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,24.4785,25.499"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FF122D46" Geometry="F1 M0,0 L0,-5.562 5.562,-5.562 z"/>
+                </DrawingGroup>
+                <GeometryDrawing Brush="#FFF9B233" Geometry="F1 M16.49,27.375 L6.271,27.375 6.271,31 16.49,31 z"/>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="cut">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <DrawingGroup ClipGeometry="F1 M0,32 L32,32 32,0 0,0 z">
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,8.125,1.9375"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 C-1.381,0 -2.5,1.119 -2.5,2.5 -2.5,3.881 -1.381,5 0,5 1.381,5 2.5,3.881 2.5,2.5 2.5,1.119 1.381,0 0,0 M0,6.5 C-2.209,6.5 -4,4.709 -4,2.5 -4,0.291 -2.209,-1.5 0,-1.5 2.209,-1.5 4,0.291 4,2.5 4,4.709 2.209,6.5 0,6.5"/>
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,24.25,2.5"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF005594" Geometry="F1 M0,0 C-1.381,0 -2.5,1.119 -2.5,2.5 -2.5,3.881 -1.381,5 0,5 1.381,5 2.5,3.881 2.5,2.5 2.5,1.119 1.381,0 0,0 M0,6.5 C-2.209,6.5 -4,4.709 -4,2.5 -4,0.291 -2.209,-1.5 0,-1.5 2.209,-1.5 4,0.291 4,2.5 4,4.709 2.209,6.5 0,6.5"/>
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,24.3662,28.3179"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF3478BC" Geometry="F1 M0,0 L-15.335,-19.994 C-13.564,-20.406 -12.241,-21.986 -12.241,-23.881 -12.241,-23.918 -12.251,-23.953 -12.252,-23.99 -11.729,-23.662 -11.245,-23.251 -10.844,-22.733 L0.9,-7.559 C2.717,-5.211 2.304,-1.852 0,0"/>
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <DrawingGroup.Transform>
+                            <MatrixTransform Matrix="1,0,0,1,20.25,5"/>
+                        </DrawingGroup.Transform>
+                        <GeometryDrawing Brush="#FF6790CB" Geometry="F1 M0,0 C0,1.802 1.2,3.308 2.839,3.809 L-12.125,23.318 C-14.429,21.466 -14.842,18.107 -13.025,15.759 L-1.281,0.585 C-0.896,0.089 -0.435,-0.304 0.063,-0.626 0.03,-0.421 0,-0.215 0,0"/>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="del">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Transform>
+                    <MatrixTransform Matrix="1.3333333,0,0,-1.3333333,0,42.666667"/>
+                </DrawingGroup.Transform>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,28.2988,1.7822"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FFE30613" Geometry="F1 M0,0 L-26.704,26.704 -24.848,28.56 1.856,1.856 z"/>
+                </DrawingGroup>
+                <DrawingGroup>
+                    <DrawingGroup.Transform>
+                        <MatrixTransform Matrix="1,0,0,1,30.1553,28.4863"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing Brush="#FFE30613" Geometry="F1 M0,0 L-26.704,-26.703 -28.56,-24.848 -1.856,1.856 z"/>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
 </ResourceDictionary>
