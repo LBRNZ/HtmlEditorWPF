@@ -551,7 +551,7 @@ namespace Smith.WPF.HtmlEditor
             }
             set
             {
-                value = (value != null ? value : string.Empty);
+                value = value ?? string.Empty;
                 BindingContent = value;
                 if (VisualEditor.Document != null && VisualEditor.Document.Body != null)
                     VisualEditor.Document.Body.InnerHtml = value;
@@ -746,6 +746,32 @@ namespace Smith.WPF.HtmlEditor
         {
             if (htmldoc != null) 
                 htmldoc.ExecuteCommand("SelectAll", false, null);
+        }
+
+        /// <summary>
+        /// React on specific keys.
+        /// </summary>
+        private bool handled = false;
+        private void VisualEditor_PreviewKeyDown(object sender, System.Windows.Forms.PreviewKeyDownEventArgs e)
+        {
+            if (!handled)
+            {
+                if (e.KeyCode == System.Windows.Forms.Keys.Enter && e.Modifiers == System.Windows.Forms.Keys.Shift)
+                {
+                    htmldoc.ExecuteCommand("Paste", false, Environment.NewLine);
+                    handled = true;
+                }
+                else if (e.KeyCode == System.Windows.Forms.Keys.Enter && e.Modifiers == System.Windows.Forms.Keys.None)
+                {
+                    htmldoc.ExecuteCommand("InsertParagraph", false, null);
+                    handled = true;
+                }
+            }
+            else
+            {
+                handled = false;
+            }
+
         }
 
         #endregion
@@ -955,8 +981,10 @@ namespace Smith.WPF.HtmlEditor
         private void InsertCodeBlockExecuted(object sender, ExecutedRoutedEventArgs e)
         {
 
-        } 
+        }
 
         #endregion
+
+
     }
 }

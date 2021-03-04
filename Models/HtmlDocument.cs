@@ -15,7 +15,7 @@ namespace Smith.WPF.HtmlEditor
         internal HtmlDocument(System.Windows.Forms.HtmlDocument htmlDocument)
         {
             sysWinFormHtmlDoc = htmlDocument;
-            msHtmlDocInterface = (MSHTML.IHTMLDocument2)htmlDocument.DomDocument;
+            msHtmlDocInterface = (IHTMLDocument2)htmlDocument.DomDocument;
         }
 
         /// <summary>

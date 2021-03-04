@@ -396,7 +396,7 @@
                          VerticalScrollBarVisibility="Auto"
                          TextWrapping="Wrap" />
                 <WindowsFormsHost x:Name="BrowserHost">
-                    <wf:WebBrowser x:Name="VisualEditor"/>
+                    <wf:WebBrowser x:Name="VisualEditor" PreviewKeyDown="VisualEditor_PreviewKeyDown"/>
                 </WindowsFormsHost>
             </Grid>
         </DockPanel>
