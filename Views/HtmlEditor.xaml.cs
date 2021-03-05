@@ -300,7 +300,7 @@ namespace Smith.WPF.HtmlEditor
             //ConfigProvider.Load();
             List<FontFamily> families = new List<FontFamily>();
             //List<FontSize> sizes = new List<FontSize>();
-            FontFamily srcfamily = new FontFamily("Times New Roman");
+            FontFamily srcfamily = new FontFamily("Calibri");
             int srcsize = 10;
 
             try
@@ -510,7 +510,44 @@ namespace Smith.WPF.HtmlEditor
                 BindingContent = this.ContentHtml;
             }
         }
+        #endregion
 
+        #region FontFamilyListVisibility Dependency Property
+
+        public Visibility FontFamilyListVisibility
+        {
+            get { return (Visibility)GetValue(FontFamilyListVisibilityProperty); }
+            set { SetValue(FontFamilyListVisibilityProperty, value); }
+        }
+
+        public static readonly DependencyProperty FontFamilyListVisibilityProperty =
+            DependencyProperty.Register("FontFamilyListVisibility", typeof(Visibility), typeof(HtmlEditor),
+                new FrameworkPropertyMetadata(Visibility.Visible, new PropertyChangedCallback(OnVisibilityChanged)));
+
+        private static void OnVisibilityChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            HtmlEditor editor = (HtmlEditor)sender;
+            editor.FontFamilyList.Visibility = (Visibility)e.NewValue;
+         }
+        #endregion
+
+        #region FontSizeListVisibility Dependency Property
+
+        public Visibility FontSizeListVisibility
+        {
+            get { return (Visibility)GetValue(FontSizeListVisibilityProperty); }
+            set { SetValue(FontSizeListVisibilityProperty, value); }
+        }
+
+        public static readonly DependencyProperty FontSizeListVisibilityProperty =
+            DependencyProperty.Register("FontSizeListVisibility", typeof(Visibility), typeof(HtmlEditor),
+                new FrameworkPropertyMetadata(Visibility.Visible, new PropertyChangedCallback(OnSizeVisibilityChanged)));
+
+        private static void OnSizeVisibilityChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            HtmlEditor editor = (HtmlEditor)sender;
+            editor.FontSizeList.Visibility = (Visibility)e.NewValue;
+        }
         #endregion
 
         /// <summary>
