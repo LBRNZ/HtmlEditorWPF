@@ -15,11 +15,11 @@
     <PackageProjectUrl>https://github.com/LBRNZ/HtmlEditorWPF</PackageProjectUrl>
     <RepositoryUrl>https://github.com/LBRNZ/HtmlEditorWPF</RepositoryUrl>
     <PackageTags>Smith.WPF.HtmlEditor HtmlEditor WPF</PackageTags>
-    <PackageReleaseNotes>Added new vector icons for context menu</PackageReleaseNotes>
+    <PackageReleaseNotes>Added new dependency properties to hide FontFamily and FontSize selector</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.0|AnyCPU'">
